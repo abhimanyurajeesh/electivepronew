@@ -22,23 +22,24 @@ export default function Indicator() {
     : POWERED_BY_LOGO_URL_EN
 
   return (
-    <div className="flex items-center justify-center pt-4 pb-4 mt-2 opacity-60 hover:opacity-80 transition-opacity">
-      <Link
-        href={PLATFORM_WEBSITE}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center"
-      >
-        <Image
-          src={logoUrl}
-          alt="Powered by ElectivePRO"
-          width={96}
-          height={16}
-          className="h-4 w-auto object-contain"
-          priority
-          suppressHydrationWarning
-        />
-      </Link>
-    </div>
+    // <div className="flex items-center justify-center pt-4 pb-4 mt-2 opacity-60 hover:opacity-80 transition-opacity">
+    //   <Link
+    //     href={PLATFORM_WEBSITE}
+    //     target="_blank"
+    //     rel="noopener noreferrer"
+    //     className="flex items-center"
+    //   >
+    //     <Image
+    //       src={logoUrl}
+    //       alt="Powered by ElectivePRO"
+    //       width={96}
+    //       height={16}
+    //       className="h-4 w-auto object-contain"
+    //       priority
+    //       suppressHydrationWarning
+    //     />
+    //   </Link>
+    // </div>
+    <></>
   )
 }
