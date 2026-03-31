@@ -199,7 +199,7 @@ export default function ExchangeEditPage() {
   const loadAvailableUniversities = async () => {
     try {
       const { data: universitiesData, error: universitiesError } = await supabase
-        .from("universities")
+        .from("exchange_universities")
         .select(`
           id,
           name,

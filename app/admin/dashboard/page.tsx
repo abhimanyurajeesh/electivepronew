@@ -147,7 +147,7 @@ export default function AdminDashboard() {
           supabase.from("groups").select("*", { count: "exact", head: true }),
           supabase.from("elective_courses").select("*", { count: "exact", head: true }),
           supabase.from("elective_exchange").select("*", { count: "exact", head: true }),
-          supabase.from("universities").select("*", { count: "exact", head: true }),
+          supabase.from("exchange_universities").select("*", { count: "exact", head: true }),
         ])
 
         // Log errors for debugging

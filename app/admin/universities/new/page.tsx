@@ -78,7 +78,7 @@ export default function NewUniversityPage() {
       }
 
       // Make the API call to Supabase - save to universities table
-      const { error } = await supabase.from("universities").insert(universityData)
+      const { error } = await supabase.from("exchange_universities").insert(universityData)
 
       if (error) throw error
 

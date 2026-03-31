@@ -6,7 +6,7 @@ export async function getCountries() {
   const supabase = await createServerComponentClient()
 
   const { data, error } = await supabase
-    .from("universities")
+    .from("exchange_universities")
     .select("country")
     .not("country", "is", null)
 

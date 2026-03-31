@@ -271,7 +271,7 @@ export function OnboardingChecklist() {
 
       // Check universities
       const { count: universitiesCount } = await supabase
-        .from("universities")
+        .from("exchange_universities")
         .select("*", { count: "exact", head: true })
       const universities = (universitiesCount || 0) > 0
 

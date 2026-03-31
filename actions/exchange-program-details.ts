@@ -29,7 +29,7 @@ export async function getUniversitiesFromIds(universityIds: string[]) {
     const supabase = getSupabaseServerClient()
     // First get universities
     const { data: universities, error: univError } = await supabase
-      .from("universities")
+      .from("exchange_universities")
       .select("*")
       .in("id", universityIds)
       .order("name")

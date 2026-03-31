@@ -294,7 +294,7 @@ export default function ExchangeBuilderPage() {
       if (!universitiesData) {
         console.log("Fetching universities from API...")
         const { data, error } = await supabase
-          .from("universities")
+          .from("exchange_universities")
           .select("*")
           .eq("status", "active")
           .order("name", { ascending: true })

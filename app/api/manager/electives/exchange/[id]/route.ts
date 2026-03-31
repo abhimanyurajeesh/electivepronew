@@ -85,7 +85,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
         // Use a more direct approach - fetch all universities and filter in JavaScript
         // This avoids potential issues with the .in() query and UUID arrays
         const { data: allUniversities, error: fetchError } = await supabaseAdmin
-          .from("universities")
+          .from("exchange_universities")
           .select(`
             id,
             name,

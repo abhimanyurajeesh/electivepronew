@@ -119,7 +119,7 @@ export default function UniversitiesPage() {
 
       try {
         const { data, error } = await supabase
-          .from("universities")
+          .from("exchange_universities")
           .select("*")
           .order("name", { ascending: true })
 
@@ -167,7 +167,7 @@ export default function UniversitiesPage() {
           // Refetch universities
           try {
             const { data, error } = await supabase
-              .from("universities")
+              .from("exchange_universities")
               .select("*")
               .order("name", { ascending: true })
 
@@ -271,7 +271,7 @@ export default function UniversitiesPage() {
   const handleStatusChange = async (universityId: string, newStatus: string) => {
     try {
       const { error } = await supabase
-          .from("universities")
+          .from("exchange_universities")
         .update({ status: newStatus, updated_at: new Date().toISOString() })
         .eq("id", universityId)
 
@@ -323,7 +323,7 @@ export default function UniversitiesPage() {
     if (!universityToDelete) return
 
     try {
-      const { error } = await supabase.from("universities").delete().eq("id", universityToDelete)
+      const { error } = await supabase.from("exchange_universities").delete().eq("id", universityToDelete)
 
       if (error) {
         throw error

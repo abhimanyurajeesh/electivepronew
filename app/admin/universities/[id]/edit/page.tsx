@@ -73,7 +73,7 @@ export default function EditUniversityPage() {
       setIsLoading(true)
       try {
         const { data, error } = await supabase
-          .from("universities")
+          .from("exchange_universities")
           .select("*")
           .eq("id", params.id)
           .single()
@@ -133,7 +133,7 @@ export default function EditUniversityPage() {
             setIsLoading(true)
             try {
               const { data, error } = await supabase
-                .from("universities")
+                .from("exchange_universities")
                 .select("*")
                 .eq("id", params.id)
                 .single()
@@ -205,7 +205,7 @@ export default function EditUniversityPage() {
       }
 
       const { error } = await supabase
-          .from("universities")
+          .from("exchange_universities")
         .update({
           name: formData.name,
           name_ru: formData.name_ru || null,

@@ -68,7 +68,7 @@ export async function GET(
     let universities = []
     if (exchangeProgram.universities && exchangeProgram.universities.length > 0) {
       const { data: fetchedUniversities, error: universitiesError } = await supabaseAdmin
-        .from("universities")
+        .from("exchange_universities")
         .select("*")
         .in("id", exchangeProgram.universities)
 
